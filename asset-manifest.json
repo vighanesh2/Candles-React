@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Candles-React/static/css/main.35a8b83a.css",
+    "main.js": "/Candles-React/static/js/main.0cfc9070.js",
+    "static/js/453.df4b879f.chunk.js": "/Candles-React/static/js/453.df4b879f.chunk.js",
+    "static/media/contact-imag.png": "/Candles-React/static/media/contact-imag.e7ca43c4c4e2ba489383.png",
+    "static/media/background.PNG": "/Candles-React/static/media/background.bb7fb41182ee3161b478.PNG",
+    "static/media/img4.PNG": "/Candles-React/static/media/img4.2b2a81f4e311e0843341.PNG",
+    "static/media/img2.PNG": "/Candles-React/static/media/img2.85c370b78073cfbab0cc.PNG",
+    "static/media/img3.PNG": "/Candles-React/static/media/img3.4f61a2b34d2757b61545.PNG",
+    "static/media/product1.png": "/Candles-React/static/media/product1.6eafd0d31838ab0fa378.png",
+    "static/media/product4.png": "/Candles-React/static/media/product4.19df52bd7a84dc0906cf.png",
+    "static/media/product3.png": "/Candles-React/static/media/product3.966f736a844ccdf23f48.png",
+    "static/media/product2.png": "/Candles-React/static/media/product2.f58e3a1a20da3c6f1a4f.png",
+    "static/media/img1.PNG": "/Candles-React/static/media/img1.c4c6912c4ae44b05f5a0.PNG",
+    "static/media/red leaf.png": "/Candles-React/static/media/red leaf.bb438eee5e28b57dd4e9.png",
+    "static/media/cursor.png": "/Candles-React/static/media/cursor.57770653eb6e982ced64.png",
+    "static/media/cursor-unscreen.gif": "/Candles-React/static/media/cursor-unscreen.313b56a7381005e1d19a.gif",
+    "static/media/candleburning.gif": "/Candles-React/static/media/candleburning.898aef53dbaeff1f4e06.gif",
+    "index.html": "/Candles-React/index.html",
+    "main.35a8b83a.css.map": "/Candles-React/static/css/main.35a8b83a.css.map",
+    "main.0cfc9070.js.map": "/Candles-React/static/js/main.0cfc9070.js.map",
+    "453.df4b879f.chunk.js.map": "/Candles-React/static/js/453.df4b879f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35a8b83a.css",
+    "static/js/main.0cfc9070.js"
+  ]
+}
