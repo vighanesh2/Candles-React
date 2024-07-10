@@ -1,0 +1,77 @@
+
+.heading{
+ 
+
+
+}
+.Left{
+
+    padding: 65px 0 65px 0;
+    text-decoration: none;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+
+width: max-content;
+    font-size: 30px;
+    font-style: normal;
+    color:red;
+    display: block;
+
+    transform: rotate(270deg);
+ 
+    
+
+}
+.Left a {
+    text-decoration: none;
+    color: inherit; /* Keep the original color */
+  }
+.navbar {
+
+    
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    padding-bottom: 90px;
+    width: max-content;
+    height: max-content;
+    text-align: center;
+
+}
+
+.navbar a {
+    padding: 65px 0 65px 0;
+    text-decoration: none;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-style: normal;
+    color:black;
+    display: flex;
+    
+   justify-content: center;
+    transform: rotate(270deg);
+
+
+
+    
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+.content1 {
+
+    height: 100%;
+  width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   
+}

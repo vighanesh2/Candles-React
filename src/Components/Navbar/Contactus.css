@@ -1,0 +1,103 @@
+
+.contact {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 20px; /* Adjust the gap between rows */
+    height: 100vh;
+}
+
+.c-bottom {
+    text-align: center;
+    height: 200px;
+}
+
+.section3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    align-items: start; /* Align items vertically at the start */
+    justify-content: center; /* Align items horizontally */
+    padding: 0 200px; /* Adjust padding to control the horizontal space */
+}
+
+.c-left, .c-right {
+    margin: 0;
+    padding: 0;
+}
+
+.c-left p, .c-right p {
+    margin: 10px 0; /* Adjust margin as needed */
+}
+
+.image-b {
+    width: 350px;
+    height: 350px;
+    margin-top: 30px;
+}
+
+.red-t {
+    color: red;
+    margin-top: 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.5rem; /* Adjust padding as needed */
+}
+
+.cta-form {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cta-form h2 {
+    margin: 0;
+}
+
+.form {
+    align-self: center;
+}
+
+.form__input {
+    width: clamp(120px, 50vw, 420px);
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    border: 1px solid #100f0f;
+    border-radius: 2px;
+    margin: 0.625rem auto;
+    transition: all 250ms;
+}
+
+.form__label {
+    font-size: 1rem;
+    color: #100f0f;
+    display: block;
+    transform: translate(1.25rem, -2.5rem);
+    transform-origin: 0 0;
+    transition: all 500ms;
+    pointer-events: none;
+}
+
+.form__input::placeholder {
+    display: none;
+    color: transparent;
+}
+
+.form__input:focus + .form__label, .form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-4.5rem) scale(1);
+    color: #100f0f;
+}
+
+.form__input:focus {
+    outline: none;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.form__input:not(:placeholder-shown) {
+    border-top-color: rgba(0, 0, 0, 0.5);
+}

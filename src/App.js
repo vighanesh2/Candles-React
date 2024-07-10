@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import Loader from './Loader.js';
+import Homescreen from './Homescreen.js';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar.js';
+import Products from './Components/Navbar/pages/Products.js';
+import Perfumes from './Components/Navbar/pages/Perfumes.js';
+import Contactus from './Components/Navbar/Contactus.js';
+import CustomCursor from './CustomCursor.js';
+import gif from './assets/cursor-unscreen.gif';
 import './App.css';
-
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fakeDataFetch = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000); // Simulating a delay for loading
+    };
+
+    fakeDataFetch();
+  }, []);
+
+  return isLoading ? (
+    <Loader />
+
+  ) : (
+
+    <div className='app'>
+
+      <Navbar />
+
+      <Routes>
+
+        <Route path="/" element={<Homescreen />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/perfumes" element={<Perfumes />} />
+        <Route path="/contact" element={<Contactus />} />
+      </Routes>
+      
+      <CustomCursor gifUrl={gif} />
+
+     {/* Render the CustomCursor component */}
+
     </div>
   );
 }
