@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Candles-React/static/css/main.35a8b83a.css",
-    "main.js": "/Candles-React/static/js/main.0cfc9070.js",
+    "main.js": "/Candles-React/static/js/main.f76fb4d7.js",
     "static/js/453.df4b879f.chunk.js": "/Candles-React/static/js/453.df4b879f.chunk.js",
     "static/media/contact-imag.png": "/Candles-React/static/media/contact-imag.e7ca43c4c4e2ba489383.png",
     "static/media/background.PNG": "/Candles-React/static/media/background.bb7fb41182ee3161b478.PNG",
@@ -19,11 +19,11 @@
     "static/media/candleburning.gif": "/Candles-React/static/media/candleburning.898aef53dbaeff1f4e06.gif",
     "index.html": "/Candles-React/index.html",
     "main.35a8b83a.css.map": "/Candles-React/static/css/main.35a8b83a.css.map",
-    "main.0cfc9070.js.map": "/Candles-React/static/js/main.0cfc9070.js.map",
+    "main.f76fb4d7.js.map": "/Candles-React/static/js/main.f76fb4d7.js.map",
     "453.df4b879f.chunk.js.map": "/Candles-React/static/js/453.df4b879f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35a8b83a.css",
-    "static/js/main.0cfc9070.js"
+    "static/js/main.f76fb4d7.js"
   ]
 }
