@@ -9,8 +9,10 @@ import Contactus from './Components/Navbar/Contactus.js';
 import CustomCursor from './CustomCursor.js';
 import gif from './assets/cursor-unscreen.gif';
 import './App.css';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     const fakeDataFetch = () => {
@@ -30,18 +32,18 @@ function App() {
     <div className='app'>
 
       <Navbar />
-
       <Routes>
 
         <Route path="/" element={<Homescreen />} />
         <Route path="/products" element={<Products />} />
+        
         <Route path="/perfumes" element={<Perfumes />} />
         <Route path="/contact" element={<Contactus />} />
       </Routes>
       
       <CustomCursor gifUrl={gif} />
 
-     {/* Render the CustomCursor component */}
+     {}
 
     </div>
   );

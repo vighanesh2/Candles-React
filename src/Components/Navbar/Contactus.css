@@ -2,7 +2,7 @@
 .contact {
     display: grid;
     grid-template-rows: auto auto;
-    row-gap: 20px; /* Adjust the gap between rows */
+    row-gap: 20px; 
     height: 100vh;
 }
 
@@ -15,9 +15,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 100px;
-    align-items: start; /* Align items vertically at the start */
-    justify-content: center; /* Align items horizontally */
-    padding: 0 200px; /* Adjust padding to control the horizontal space */
+    align-items: start; 
+    justify-content: center; 
+    padding: 0 200px; 
 }
 
 .c-left, .c-right {
@@ -26,7 +26,7 @@
 }
 
 .c-left p, .c-right p {
-    margin: 10px 0; /* Adjust margin as needed */
+    margin: 10px 0;
 }
 
 .image-b {
@@ -47,7 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1.5rem; /* Adjust padding as needed */
+    padding: 2rem 1.5rem; 
 }
 
 .cta-form {

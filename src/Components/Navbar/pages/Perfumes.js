@@ -1,18 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './perfumes.css';
-import leaf from '/Users/ramakant/Desktop/candles/candle/src/assets/red leaf.png';
-import Image1 from '/Users/ramakant/Desktop/candles/candle/src/assets/img1.PNG';
-import Image2 from '/Users/ramakant/Desktop/candles/candle/src/assets/img2.PNG';
-import Image3 from '/Users/ramakant/Desktop/candles/candle/src/assets/img3.PNG';
-import Image4 from '/Users/ramakant/Desktop/candles/candle/src/assets/img4.PNG';
+import leaf from '/Users/ramakant/Candles-React/src/assets/red leaf.png';
+import Image1 from '/Users/ramakant/Candles-React/src/assets/img1.PNG';
+import Image2 from '/Users/ramakant/Candles-React/src/assets/img2.PNG';
+import Image3 from '/Users/ramakant/Candles-React/src/assets/img3.PNG';
+import Image4 from '/Users/ramakant/Candles-React/src/assets/img4.PNG';
 
 const Perfumes = () => {
   const slideIn = {
     hidden: { x: '-100vw' },
     visible: { x: 0, transition: { duration: 0.9 } }
   };
-
   return (
     <motion.div 
       className='perfumes'
@@ -20,6 +19,7 @@ const Perfumes = () => {
       animate="visible"
       variants={slideIn}
     >
+      
       <section className='section1'>
         <div className='image1'>
           <img src={leaf} className="red-leaf" />

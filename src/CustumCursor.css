@@ -1,8 +1,8 @@
 .custom-cursor {
     position: absolute;
-    pointer-events: none; /* This ensures the custom cursor doesn’t block pointer events */
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
+    pointer-events: none; 
+    width: 80px; 
+    height: 80px; 
     transform: translate(-50%, -50%);
     z-index: 9999;
   }

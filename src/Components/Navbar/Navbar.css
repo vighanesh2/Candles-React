@@ -24,7 +24,7 @@ width: max-content;
 }
 .Left a {
     text-decoration: none;
-    color: inherit; /* Keep the original color */
+    color: inherit; 
   }
 .navbar {
 

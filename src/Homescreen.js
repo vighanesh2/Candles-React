@@ -4,13 +4,10 @@ import './Homescreen.css';
 import { Link } from 'react-router-dom';
 
 const Homescreen = () => {
-
-
-
-
   return (
     <div>
-  
+        
+
       <motion.div
         initial={{ x: '-100vw' }}
         animate={{ x: 0 }}
@@ -18,7 +15,6 @@ const Homescreen = () => {
         className='backg'
         whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
       >
-        {/* Your content here */}
       </motion.div>
 
       <div className='title' id='playground'>
