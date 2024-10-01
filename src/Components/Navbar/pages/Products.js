@@ -1,18 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Products.css';
 import { motion } from 'framer-motion';
-import Cart from './cart'; // Assuming Cart component is implemented separately
-
-// Import product images
-import Product1 from '/Users/ramakant/Desktop/candles/candle/src/assets/product1.png';
-import Product2 from '/Users/ramakant/Desktop/candles/candle/src/assets/product2.png';
-import Product3 from '/Users/ramakant/Desktop/candles/candle/src/assets/product3.png';
-import Product4 from '/Users/ramakant/Desktop/candles/candle/src/assets/product4.png';
-
-// Import other product images as needed
+import Cart from './cart'; 
+import { db } from './firebase';
+import { collection, getDocs } from 'firebase/firestore'; 
 
 const Products = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [products, setProducts] = useState([]);
+
+ 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const querySnapshot = await getDocs(collection(db, 'products')); 
+      const productList = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProducts(productList); 
+    };
+
+    fetchProducts();
+  }, []);
 
   const addToCart = (name, price) => {
     setCartItems([...cartItems, { name, price }]);
@@ -23,36 +32,9 @@ const Products = () => {
     setCartItems(newCartItems);
   };
 
-  const products = [
-    {
-      id: 1,
-      name: 'SWAN LAKE BLUE',
-      price: 61.98,
-      image: Product1,
-    },
-    {
-      id: 2,
-      name: 'SWAN LAKE RED',
-      price: 61.98,
-      image: Product2,
-    },
-    {
-      id: 2,
-      name: 'SWAN LAKE GREEN',
-      price: 61.98,
-      image: Product3,
-    }, {
-      id: 2,
-      name: 'SWAN LAKE PURPLE',
-      price: 61.98,
-      image: Product4,
-    },
-    // Add more products as needed
-  ];
-
   const slideIn = {
     hidden: { x: '-100vw' },
-    visible: { x: 0, transition: { duration: 0.9 } }
+    visible: { x: 0, transition: { duration: 0.9 } },
   };
 
   return (
@@ -75,8 +57,8 @@ const Products = () => {
                 </div>
                 <div className="contentBox">
                   <h3>{product.name}</h3>
-                  <h2 className="price">{product.price.toFixed(2)}€</h2>
-                  <button className="buy" onClick={() => addToCart(product.name, product.price)}>Buy Now</button>
+                  <h2 className="price">{product.price}€</h2>
+                  <button className="buy" onClick={() => addToCart(product.name, product.price)}>Add to cart</button>
                 </div>
               </div>
             ))}

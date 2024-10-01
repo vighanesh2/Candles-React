@@ -1,5 +1,4 @@
 .html{
-  cursor: url('./assets/cursornew.jpg'), auto;
 
 }
 .App {
@@ -63,10 +62,10 @@
 .horizontal-scroll-item {
   scroll-snap-align: start;
   flex: none;
-  width: 100vw; /* Adjust as needed */
+  width: 100vw;
 }
 html {
-  cursor: url('/Users/ramakant/Desktop/candles/candle/src/assets/cursor.png'), auto;
+  cursor: url('/Users/ramakant/Candles-React/src/assets/cursor.png'), auto;
  height: 100%;
 }
 

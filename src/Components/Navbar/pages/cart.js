@@ -1,16 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { db } from './firebase'; 
+import { collection, getDocs, addDoc } from 'firebase/firestore';
+import './cart.css';
+
 
 const Cart = ({ cartItems, removeFromCart }) => {
   const [purchased, setPurchased] = useState(false);
 
-  const handlePurchase = () => {
+
+
+  const handlePurchase = async () => {
     setPurchased(true);
-    setTimeout(() => {
-      setPurchased(false);
-      // Clear the cart after purchase confirmation
-      // You may want to implement this based on your specific needs
-      // Example: setCartItems([]);
-    }, 3000); // Reset message after 3 seconds
+
+    const purchaseData = {
+      timestamp: new Date(),
+      user: "Vighanesh Gaund", 
+      billingAddress: "123 Main St, NY", 
+      items: cartItems,
+    };
+
+    try {
+    
+      await addDoc(collection(db, "purchases"), purchaseData);
+      console.log("Purchase added to Firestore");
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
+
+  const handleCloseReceipt = () => {
+    setPurchased(false); 
   };
 
   return (
@@ -24,7 +43,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
             {cartItems.map((item, index) => (
               <li key={index}>
                 <h3>{item.name}</h3>
-                <p>Price: {item.price.toFixed(2)}€</p> {/* Ensure price is formatted */}
+                <p>Price: {item.price.toFixed(2)}€</p>
                 <button onClick={() => removeFromCart(index)}>Remove</button>
               </li>
             ))}
@@ -34,7 +53,27 @@ const Cart = ({ cartItems, removeFromCart }) => {
           </button>
         </div>
       )}
-      {purchased && <p className="purchase-message">Thanks for purchasing!</p>}
+      {purchased && (
+        <div className="receipt">
+          <div className="receipt-header">
+            <h3>Receipt</h3>
+            <button className="close-button" onClick={handleCloseReceipt}>X</button>
+          </div>
+          <p><strong>Timestamp:</strong> {new Date().toLocaleString()}</p>
+          <p><strong>Name:</strong> Vighanesh Gaund</p> 
+          <p><strong>Billing Address:</strong> 123 Main St, NY</p> 
+          <ul>
+            {cartItems.map((item, index) => (
+              <li key={index}>
+                {item.name} - {item.price.toFixed(2)}€
+              </li>
+            ))}
+          </ul>
+          <div className="receipt-total">
+            <strong>Total: {cartItems.reduce((total, item) => total + item.price, 0).toFixed(2)}€</strong>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
