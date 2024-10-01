@@ -18,7 +18,7 @@ function App() {
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 2000); // Simulating a delay for loading
+      }, 2000); 
     };
 
     fakeDataFetch();
